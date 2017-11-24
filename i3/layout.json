@@ -1,0 +1,160 @@
+{
+    // workspace with 1 children
+    "border": "pixel",
+    "floating": "auto_off",
+    "layout": "splith",
+    "percent": null,
+    "type": "workspace",
+    "name": "3:org",
+    "nodes": [
+        {
+            "border": "pixel",
+            "current_border_width": 1,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 640,
+               "width": 672,
+               "x": 0,
+               "y": 0
+            },
+            "name": "emacs@Blade",
+            "percent": 1,
+            "swallows": [
+               {
+                "class": "^Emacs$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+
+{
+    // workspace with 2 children
+    "border": "pixel",
+    "floating": "auto_off",
+    "layout": "splith",
+    "percent": null,
+    "type": "workspace",
+    "name": "4:messages",
+    "nodes": [
+        {
+            "border": "pixel",
+            "current_border_width": 1,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 1025,
+               "width": 1920,
+               "x": 0,
+               "y": 55
+            },
+            "name": "Telegram",
+            "percent": 0.5,
+            "swallows": [
+               {
+                "class": "^TelegramDesktop$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "pixel",
+            "current_border_width": 1,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 1025,
+               "width": 1920,
+               "x": 0,
+               "y": 55
+            },
+            "name": "Skype Preview",
+            "percent": 0.5,
+            "swallows": [
+               {
+                "class": "^Skype$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+
+{
+    // workspace with 2 children
+    "border": "pixel",
+    "floating": "auto_off",
+    "layout": "splith",
+    "percent": 1,
+    "name": "5:pandora",
+    "type": "workspace",
+    "nodes": [
+        {
+            "border": "pixel",
+            "current_border_width": 1,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 995,
+               "width": 922,
+               "x": 973,
+               "y": 60
+            },
+            "name": "Home - Google Play Music",
+            "percent": 0.5,
+            "swallows": [
+               {
+               "instance": "^play\\.google\\.com__music_listen$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            // splitv split container with 2 children
+            "border": "pixel",
+            "floating": "auto_off",
+            "layout": "splitv",
+            "percent": 0.5,
+            "type": "con",
+            "nodes": [
+                {
+                    "border": "pixel",
+                    "current_border_width": 1,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 485,
+                       "width": 922,
+                       "x": 25,
+                       "y": 60
+                    },
+                    "name": "Pandora Radio - Listen to Free Internet Radio, Find New Music",
+                    "percent": 0.5,
+                    "swallows": [
+                       {
+                       "instance": "^pandora\\.com$"
+                       }
+                    ],
+                    "type": "con"
+                },
+                {
+                    "border": "pixel",
+                    "current_border_width": 1,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 434,
+                       "width": 802,
+                       "x": 0,
+                       "y": 0
+                    },
+                    "name": "cava",
+                    "percent": 0.5,
+                    "swallows": [
+                       {
+                       "class": "^Termite$"
+                       }
+                    ],
+                    "type": "con"
+                }
+            ]
+        }
+    ]
+}
+
