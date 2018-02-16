@@ -107,9 +107,8 @@ bindsym $mod+9 workspace "19:9"
 bindsym $mod+0 workspace "20:0"
 bindsym $mod+c workspace "1:chrome"
 bindsym $mod+t workspace "2:terminal"
-bindsym $mod+o workspace "3:org"
-bindsym $mod+m workspace "4:messages"
-bindsym $mod+p workspace "5:pandora"
+bindsym $mod+m workspace "3:messages"
+bindsym $mod+p workspace "4:pandora"
 
 
 # move focused container to workspace
@@ -125,31 +124,25 @@ bindsym $mod+Shift+9 move container to workspace "19:9"
 bindsym $mod+Shift+0 move container to workspace "20:0"
 bindsym $mod+Shift+c move container to workspace "1:chrome"
 bindsym $mod+Shift+t move container to workspace "2:terminal"
-bindsym $mod+Shift+o move container to workspace "3:org"
-bindsym $mod+Shift+m move container to workspace "4:messages"
-bindsym $mod+Shift+p move container to workspace "5:pandora"
+bindsym $mod+Shift+m move container to workspace "3:messages"
+bindsym $mod+Shift+p move container to workspace "4:pandora"
 
-assign [class="Emacs"] "3:org"
+assign [class="Skype"] "3:messages"
 
-assign [class="Skype"] "4:messages"
+assign [class="Telegram"] "3:messages"
+assign [class="Discord"] "3:messages"
 
-assign [class="Telegram"] "4:messages"
-assign [class="Discord"] "4:messages"
+# exec --no-startup-id "i3-msg 'append_layout ~/.config/i3/layout.json'"
 
-exec --no-startup-id "i3-msg 'append_layout ~/.config/i3/layout.json'"
-
-exec emacs
 exec skypeforlinux
 exec telegram-desktop
-exec chromium --app=https://pandora.com/
-exec chromium --app=https://play.google.com/music/listen
-exec termite -e cava
+# exec chromium --app=https://pandora.com/
+# exec chromium --app=https://play.google.com/music/listen
 
 workspace "1:chrome" output HDMI-0
 workspace "2:terminal" output eDP-1-1
-workspace "3:org" output eDP-1-1
-workspace "4:messages" output eDP-1-1
-workspace "5:pandora" output eDP-1-1
+workspace "3:messages" output HDMI-0
+workspace "4:pandora" output eDP-1-1
 
 # reload the configuration file
 bindsym $mod+Shift+s reload
@@ -211,5 +204,8 @@ bindsym $mod+Tab workspace back_and_forth
 
 exec --no-startup-id "setxkbmap -layout us,ru && setxkbmap -option 'grp:switch,grp:caps_toggle,grp_led:caps us,ru'"
 
-exec --no-startup-id sudo dockerd
 exec --no-startup-id dropbox
+
+exec export BROWSER=/usr/bin/google-chrome-stable
+
+exec nvidia-settings --assign CurrentMetaMode="eDP-1-1: nvidia-auto-select +0+0 {ForceCompositionPipeline=On}, HDMI-0: nvidia-auto-select +1920+0 {ForceCompositionPipeline=On}"
